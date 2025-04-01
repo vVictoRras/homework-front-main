@@ -1,5 +1,6 @@
 {
   "name": "pre-homeworks",
+  "homepage": "https://vVictoRras.github.io/homework-front-main",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -44,6 +45,7 @@
     ]
   },
   "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
     "prettier": "3.0.0"
   }
 }
