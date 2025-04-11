@@ -1,11 +1,13 @@
+import { MouseEvent } from 'react';
+
 type ButtonPropsType = {
-  callBack: any // НУЖНО ПРОТИПИЗИРОВАТЬ
-  name: any // НУЖНО ПРОТИПИЗИРОВАТЬ
+  onClick: ()=>void // НУЖНО ПРОТИПИЗИРОВАТЬ
+  name: string // НУЖНО ПРОТИПИЗИРОВАТЬ
 };
 
 export const Button = (props: ButtonPropsType) => {
-  const callBackHandler = () => {
-    // НУЖНО ДОПИСАТЬ
+  const callBackHandler = (event:MouseEvent<HTMLButtonElement> ) => {
+    props.onClick()
   };
 
   return (

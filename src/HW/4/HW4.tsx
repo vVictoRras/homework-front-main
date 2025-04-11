@@ -22,6 +22,7 @@ export const HW4 = () => {
   const handleSave = () => {
     setTexts([currentText, ...texts]);
     setCurrentText('');
+
   };
 
   return (
@@ -32,16 +33,16 @@ export const HW4 = () => {
         <h1 id={'hw04-default-text'}>Здесь появится новое дело</h1>
       )}
 
-      <Input НЕ ХВАТАЕТ АРГУМЕНТОВ />
+      <Input  currentText={currentText} setCurrentText={setCurrentText} />
 
-      <Button НЕ ХВАТАЕТ АРГУМЕНТОВ />
+      <Button name={'Добавить'} onClick={()=>handleSave()} />
 
       <h1 style={{ marginTop: '50px' }}>СПИСОК ДЕЛ НА ДЕНЬ:</h1>
 
       <ol id={'hw04-tasks'}>
         {texts.map((el, index) => {
           return (
-            <li key={index} id={`hw04-task-${index}`} className={ЕСЛИ ЧЕТН ? S.chetNechet : ''}>
+            <li key={index} id={`hw04-task-${index}`} className={index%2===0 ? s.chetNechet : ''}>
               {el}
             </li>
           );
